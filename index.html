@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пройдите Опрос</title>
+    <style>
+        form {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        body {
+            margin-top: 75px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Пройдите опрос</h1>
+    <p><span style="color:red;">*</span> - Обязательные для заполнения поля</p>
+    <!-- Не проходит имя меньше 5 знаков например Олег-->
+    <form action="" id="auth">
+    <form action="">
+        <label for="name" style="font-weight: bold;" form="auth">Введите Имя <span style="color:red;">*</span></label>
+        <input type="text" pattern="^[А-Яа-я]{5,}" placeholder="Иван" required>
+    </form>
+    <!-- Не поддерживаются люди с двойной фамилией, но есть пробел, не обязательное поле -->
+    <form action="">
+        <label for="name" style="font-weight: bold;">Введите Фамилию <span style="color:red;">*</span></label>
+        <input type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Иванов">
+    </form>
+    <p style="font-weight: bold;">Укажите Ваш пол</p>
+    <form>
+        <!-- Одновременный выбор 2 полов -->
+        <label>
+            <input type="checkbox" name="languages" value="HTML">
+            Мужской
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="CSS">
+            Женский
+        </label>
+    </form>
+    <!-- Загрузка только одного файла и в любом формате -->
+    <p style="font-weight: bold;">Загрузите 2 фото своей банковской карты с двух сторон в формате .jpg или .png</p>
+    <form enctype="multipart/form-data" method="post">
+        <input type="file" name="f">
+    </form>
+    <!-- Город не поддерживает дефис например Ростов-на-Дону-->
+    <form action="">
+        <label for="name" style="font-weight: bold;">Город проживания</label>
+        <input type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Новосибирск">
+    </form>
+    <!-- Улица не поддерживает цифры, например 1905 года -->
+    <form action="">
+        <label for="name" style="font-weight: bold;">Улица</label>
+        <input type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Пушкина">
+    </form>
+    <!-- Нельзя написать корпус или  дом 9а -->
+    <form action="">
+        <label for="name" style="font-weight: bold;">Дом №</label>
+        <input type="text" pattern="^[0-9]+$" placeholder="1">
+    </form>
+    <!-- Можно ввести от 5-10 цифр, но в почтовом индексе 6 цифр -->
+    <form action="">
+        <label for="name" style="font-weight: bold;">Почтовый индекс</label>
+        <input type="text" pattern="[0-9]{5,10}" placeholder="633210">
+    </form>
+    <p><input type="submit" form="auth"></p>
+    </form>
+</body>
+
+</html>
