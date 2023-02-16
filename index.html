@@ -26,7 +26,7 @@
         <form action="">
             <label for="name" style="font-weight: bold;" form="auth">Введите Имя <span
                     style="color:red;">*</span></label>
-            <input type="text" pattern="^[А-Яа-я]{3,}" placeholder="Иван" required>
+            <input type="text" pattern="^[А-Яа-я]{3,}" placeholder="Иван" maxlength="10" required>
         </form>
         <form action="">
             <label for="name" style="font-weight: bold;">Введите Фамилию <span style="color:red;">*</span></label>
@@ -49,7 +49,7 @@
         </form>
         <form action="">
             <label for="name" style="font-weight: bold;">Город проживания</label>
-            <input type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Новосибирск">
+            <input type="text" pattern="^[А-Яа-яЁё\s]+$" placeholder="Новосибирск" maxlength="30">
         </form>
         <form action="">
             <label for="name" style="font-weight: bold; margin-left: 145px;">Улица</label>
@@ -57,7 +57,7 @@
         </form>
         <form action="">
             <label for="name" style="font-weight: bold;">Дом №</label>
-            <input type="text" pattern="^[0-9]+$" placeholder="1">
+            <input type="text" pattern="^[0-9]+$" placeholder="1" maxlength="30">
         </form>
         <form action="">
             <label for="name" style="font-weight: bold;">Почтовый индекс</label>
